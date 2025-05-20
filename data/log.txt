@@ -1,0 +1,19 @@
+=== Trace details ===
+[12/14/2024-16:33:39] [I] Trace averages of 100 runs:
+[12/14/2024-16:33:39] [I] Average on 100 runs - GPU latency: 10.6417 ms - Host latency: 11.0827 ms (enqueue 4.40361 ms)
+[12/14/2024-16:33:39] [I] Average on 100 runs - GPU latency: 10.3086 ms - Host latency: 10.7388 ms (enqueue 3.85295 ms)
+[12/14/2024-16:33:39] [I] 
+[12/14/2024-16:33:39] [I] === Performance summary ===
+[12/14/2024-16:33:39] [I] Throughput: 89.8182 qps
+[12/14/2024-16:33:39] [I] Latency: min = 9.44824 ms, max = 21.3418 ms, mean = 10.9559 ms, median = 10.6603 ms, percentile(90%) = 12.2302 ms, percentile(95%) = 12.822 ms, percentile(99%) = 15.0601 ms
+[12/14/2024-16:33:39] [I] Enqueue Time: min = 2.5603 ms, max = 19.1099 ms, mean = 4.31642 ms, median = 3.60529 ms, percentile(90%) = 5.40448 ms, percentile(95%) = 7.85425 ms, percentile(99%) = 18.0242 ms
+[12/14/2024-16:33:39] [I] H2D Latency: min = 0.369873 ms, max = 0.524567 ms, mean = 0.404767 ms, median = 0.39859 ms, percentile(90%) = 0.44397 ms, percentile(95%) = 0.467224 ms, percentile(99%) = 0.508301 ms
+[12/14/2024-16:33:39] [I] GPU Compute Time: min = 9.04297 ms, max = 20.9406 ms, mean = 10.5221 ms, median = 10.2226 ms, percentile(90%) = 11.8033 ms, percentile(95%) = 12.4233 ms, percentile(99%) = 14.658 ms
+[12/14/2024-16:33:39] [I] D2H Latency: min = 0.00732422 ms, max = 0.138123 ms, mean = 0.0290208 ms, median = 0.01474 ms, percentile(90%) = 0.0688477 ms, percentile(95%) = 0.0771484 ms, percentile(99%) = 0.107422 ms
+[12/14/2024-16:33:39] [I] Total Host Walltime: 2.93927 s
+[12/14/2024-16:33:39] [I] Total GPU Compute Time: 2.77784 s
+[12/14/2024-16:33:39] [W] * GPU compute time is unstable, with coefficient of variance = 11.2813%.
+[12/14/2024-16:33:39] [W]   If not already in use, locking GPU clock frequency or adding --useSpinWait may improve the stability.
+[12/14/2024-16:33:39] [I] Explanations of the performance metrics are printed in the verbose logs.
+[12/14/2024-16:33:39] [I] 
+&&&& PASSED TensorRT.trtexec [TensorRT v8601] # trtexec --onnx=model.onnx --saveEngine=rtdetr_r18_static_fp16.trt --shapes=images:1x3x640x640 --avgRuns=100 --fp16

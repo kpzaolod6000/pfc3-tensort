@@ -1,0 +1,5 @@
+trtexec --onnx=model.onnx --saveEngine=rtdetr_r18_static_fp16.trt --shapes=images:1x3x640x640 --avgRuns=100 --fp16
+trtexec --loadEngine=rtdetr_r18_static_fp16.trt \
+        --shapes=images:1x3x640x640 \
+        --avgRuns=1000 \
+        --fp16
